@@ -3,7 +3,7 @@
   outputs = { self, nixpkgs }: {
 
     nixosModules = let
-      base = { config, pkgs }: {
+      base = {
         time.timeZone = "America/New_York";
 
         boot.cleanTmpDir = true;

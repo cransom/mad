@@ -12,7 +12,8 @@
           [ "https://ogre.mad.hubns.net/cache" "https://cache.nixos.org" ];
         nix.settings.trusted-public-keys =
           [ "mad.hubns.net:u+Hmwl+Uffo+TMLr4PMzQ2+rsvHFXoPOR1RZrzHDqoQ=" ];
-        nix.settings.experimental-features =  [ "nix-command" "recursive-nix" "flakes" ];
+        nix.settings.experimental-features =
+          [ "nix-command" "recursive-nix" "flakes" ];
 
         programs.mtr.enable = true;
 
@@ -93,12 +94,10 @@
             "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKVG3x7W7YYynwf9MkuiqjQoqNISaOGN5PBGi/0ICasy Shortcuts on cPhone"
           ];
         };
-
-    };
+      };
     in {
-      inherit base;
+      base = { config = base; };
       default = base;
     };
-
   };
 }

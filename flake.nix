@@ -18,10 +18,6 @@
 
         nix.optimise.automatic = true;
 
-        networking.firewall.enable = pkgs.lib.mkDefault true;
-        networking.firewall.allowedTCPPorts = [ 22 5000 ];
-        networking.firewall.allowedUDPPorts = [ 5000 ];
-        networking.firewall.allowPing = true;
         networking.firewall.trustedInterfaces = [ "tailscale0" ];
         services.openssh.extraConfig = ''
           StreamLocalBindUnlink yes

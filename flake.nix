@@ -1,7 +1,7 @@
 {
   inputs = { nixpkgs.url = "github:nixos/nixpkgs/22.11"; };
   outputs = { self, nixpkgs }: {
-    nixosModules.base = { config }: {
+    nixosModules.base = { config, pkgs, lib, ...}: {
       options = { };
       config = { config, pkgs, ... }: {
         time.timeZone = "America/New_York";

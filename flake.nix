@@ -4,8 +4,6 @@
 
     nixosModules = let
       base = { config, lib }: {
-      options = { };
-      config = { config, pkgs, ... }: {
         time.timeZone = "America/New_York";
 
         boot.cleanTmpDir = true;
@@ -96,7 +94,6 @@
           ];
         };
 
-      };
     };
     in {
       inherit base;
